@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #edf1fc;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerTabelPlaylist">
+   <children>
+   
+      <Button fx:id="btn_backToMenu" layoutX="27.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleBackToMenu" style="-fx-background-color: transparent;-fx-cursor: hand;">
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/Arrows-Back-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      
+      <TableView fx:id="tablePlaylist" layoutX="311.0" layoutY="48.0" prefHeight="355.0" prefWidth="564.0" style="-fx-border-color: #ffffff; -fx-overflow-x: hidden;" stylesheets="@application.css" AnchorPane.bottomAnchor="425.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="55.0" text="Id" />
+          <TableColumn fx:id="playlistName" prefWidth="503.0" text="Nume playlist" />
+        </columns>
+      </TableView>
+      
+      <TableView fx:id="tableSong" layoutX="311.0" layoutY="425.0" prefHeight="355.0" prefWidth="564.0" style="-fx-border-color: #ffffff; -fx-overflow-x: hidden;" stylesheets="@application.css" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="425.0">
+        <columns>
+          <TableColumn fx:id="idSong" prefWidth="52.0" text="Id" />
+          <TableColumn fx:id="title" prefWidth="113.0" text="Nume cantec" />
+            <TableColumn fx:id="artistBand" prefWidth="118.0" text="Artist / Trupa" />
+            <TableColumn fx:id="duration" prefWidth="76.0" text="Duratie" />
+            <TableColumn fx:id="type" minWidth="5.0" prefWidth="58.0" text="Gen" />
+            <TableColumn fx:id="youtube_link" prefWidth="678.0" text="Link youtube" />
+        </columns>
+      </TableView>
+      
+      <Button fx:id="btn_addSong" layoutX="27.0" layoutY="458.0" mnemonicParsing="false" onAction="#handleBtnAddSong" prefHeight="34.0" prefWidth="231.0" style="-fx-background-color: fa7169;-fx-cursor: hand;" text="Adauga cantec la playlist" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/plus-color.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_addPlayList" layoutX="27.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBtnAddPlaylist" prefHeight="30.0" prefWidth="231.0" style="-fx-background-color: #3a81f7;-fx-cursor: hand;" text="Adauga playlist nou" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/plus-color.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <VBox layoutX="27.0" layoutY="76.0" prefHeight="85.0" prefWidth="134.0" />
+      <TextField fx:id="tf_2_namesong" layoutX="27.0" layoutY="393.0" prefHeight="25.0" prefWidth="231.0" promptText="Nume melodie" />
+      <TextField fx:id="tf_2_artist" layoutX="293.0" layoutY="393.0" prefWidth="231.0" promptText="Nume artist" />
+      <Button fx:id="btn_addSongs" layoutX="27.0" layoutY="679.0" mnemonicParsing="false" onAction="#handleBtnAddSongs" prefHeight="34.0" prefWidth="231.0" style="-fx-background-color: #0c226b;-fx-cursor: hand;" text="Adauga cantece la playlist" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/plus-color.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#545454" layoutX="27.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adaugă o melodie la playlistul selectat introducând numele melodiei și artistul">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tf_newPlaylist" layoutX="27.0" layoutY="190.0" prefHeight="25.0" prefWidth="231.0" promptText="Nume playlist" />
+      <Text fill="#545454" layoutX="27.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creează un playlist nou menționând ce nume dorești să aibă acesta">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tf_3_namesong" layoutX="27.0" layoutY="614.0" prefHeight="25.0" prefWidth="231.0" promptText="Nume artist" />
+      <Text fill="#545454" layoutX="27.0" layoutY="577.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adaugă  toate melodiile unui anumit artist menționat la playlistul selectat">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_seeSongs" layoutX="716.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleBtnSeeSongs" prefHeight="30.0" prefWidth="231.0" style="-fx-background-color: #3a81f7;-fx-cursor: hand;" text="Vezi melodii din playlist" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/plus-color.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      
+       <Button layoutX="1234.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleRefreshAllSongs" style="-fx-background-color: transparent;-fx-cursor: hand;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="http://www.mirunaandriesei.ro/java/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+   
+   
+   
+</AnchorPane>

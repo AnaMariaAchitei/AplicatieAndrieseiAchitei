@@ -1,0 +1,61 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.table-view {
+    -fx-background-color: #ffffff;
+
+}
+
+.table-view .column-header-background .filler{
+	-fx-background-color: #ffffff;
+}
+
+
+
+.table-view .column-header{
+	-fx-background-color: #ffffff;
+
+}
+
+.table-view .column-header .label{
+	-fx-text-fill: #397ff1;
+	-fx-font-size: 14px;
+	-fx-padding:10;
+}
+
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #3a81f7;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: #ffffff;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: #edf1fc;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: #000000;
+}
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #edf1fc;
+    -fx-text-fill: #000000;
+}
+
+/* Selected row hovered */
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: #3a81f7;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: #ffffff;
+}
+
+/* Selected row hovered when table not focused */
+.table-view:row-selection .table-row-cell:filled:focused:hover {
+    -fx-background-color: #3a81f7;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1, 2 2 3 2, 3 3 4 3;
+    -fx-text-fill: #ffffff;
+}
